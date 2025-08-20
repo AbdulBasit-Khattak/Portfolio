@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://codepen.io/GreenSock/pen/xxmzBrw.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="fontawesome-free-6.7.1-web/css/all.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Web developer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0e0e15;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+    section {
+      padding: 80px 60px;
+      min-height: 100vh;
+    }
+
+
+    
+
+
+    /* Robotics Intro Section */
+    .robotics-intro {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(rgba(20, 20, 20, 0.425), rgba(24, 24, 24, 0.8)), url("css/images/web_card.jpg") no-repeat center/cover;
+      position: relative;
+      flex-direction: row;
+    }
+    .robotics-text {
+      flex: 1;
+      max-width: 50%;
+      margin-left: 40px;
+    }
+    .robotics-text h1 {
+      font-size: 48px;
+      color:white;
+      margin-bottom: 20px;
+    }
+    .robotics-text h3 {
+      color: orange;
+    } 
+    .robotics-text p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+    .view-certs-btn {
+      margin-top: 30px;
+      padding: 12px 20px;
+      background-color: orange;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .certificates-container {
+      display: none;
+      position: absolute;
+      top: 60%;
+      left: 0;
+      width: 100%;
+      background-color: rgba(10, 10, 10, 0.527);
+      padding: 40px;
+      z-index: 10;
+    }
+    .certificates-container img {
+      width: 400px;
+      margin-right: 20px;
+      border-radius: 8px;
+    }
+    .certificates-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 30px;
+      font-size: 50px;
+      color: orange;
+      cursor: pointer;
+    }
+
+    /* Projects Section */
+    .projects-section {
+      background-color: #1c1c1c;
+    }
+    .achievements-section {
+      background: linear-gradient( rgba(24, 24, 24, 0.8) , rgba(20, 20, 20, 0.425)) ;
+      background-color: #a19f9c;
+    }
+
+    .section-title {
+      font-size: 40px;
+      text-align: center;
+      color: orange;
+      margin-bottom: 40px;
+    }
+
+    .project-grid, .achievement-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+        gap: 30px;
+        justify-content: center; /* centers the whole set including incomplete last row */
+    }
+
+    .card {
+      
+      background-color: #302f2f;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      color: #fff;
+      transition: transform 0.3s;
+       width: 100%;
+      max-width: 350px;
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .card p {
+      margin-top: 12px;
+      font-size: 14px;
+      color: white;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #111;
+      color: #888;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .robotics-intro {
+        flex-direction: column;
+      }
+      .robotics-text {
+        max-width: 100%;
+        text-align: center;
+      }
+      .certificates-row {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .robotics-intro {
+           height: 500px;
+    }
+    }
+
+.back-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: background 0.2s, transform 0.2s;
+  z-index: 1000;
+  font-size: 0.9rem;
+}
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+
+  </style>
+</head>
+<body>
+
+ 
+ 
+
+<a href="index.html#skills" class="back-btn" aria-label="Go back to main portfolio">
+  &larr; Back
+</a>
+
+  <!-- Robotics Section -->
+  <section class="robotics-intro">
+    
+    <div class="robotics-text">
+      <h1>Web development</h1>
+      <h3>Code with purpose, design with passion.</h3>
+      <p>I specialize in creating responsive, user-friendly, and visually
+         appealing websites that deliver impactful digital experiences. My 
+         expertise spans front-end development, from crafting clean,
+          efficient code to implementing interactive features that enhance 
+          usability. Whether it’s building from scratch or improving existing 
+          platforms, my focus is on delivering solutions that combine creativity, 
+          functionality, and innovation.</p>
+      <button class="view-certs-btn" onclick="toggleCertificates()">View My Certificates</button>
+    </div>
+
+    <!-- Certificate Display -->
+    <div class="certificates-container" id="certificatesBox">
+      <span class="close-btn" onclick="toggleCertificates()">&times;</span>
+      <div class="certificates-row">
+        <img src="css/images/Html Certificate.png" alt="Certificate 1">
+        <img src="css/images/CSS Certificate.png" alt="Certificate 2">
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects-section">
+    <h2 class="section-title">My Projects</h2>
+    <div class="project-grid">
+      <a href="https://abdulbasit-khattak.github.io/Devsland/"><div class="card">
+        <img src="css/images/Capture.PNG" alt="">
+        <p>DEVSLAND Website</p>
+      </div></a>
+  
+      <div class="card">
+        <img src="css/images/light-bulb-with-drawing-graph.jpg" alt="">
+        <p>Coming SOON</p>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 AbdulBasit Khattak. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleCertificates() {
+      const certs = document.getElementById("certificatesBox");
+      certs.style.display = certs.style.display === "flex" || certs.style.display === "block" ? "none" : "block";
+    }
+  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+ <script type="text/javascript" src="js/jquery.js"></script>
+ <script type="text/javascript" src="js/bootstrap.min.js"></script>
+ <script src="js/wow.min.js"></script>
+                  <script>
+                  new WOW().init();
+                  </script>
+                  <script>
+                   AOS.init();
+                   </script>
+
+</body>
+</html>
